@@ -1,0 +1,22 @@
+group 'com.twu'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework:spring-webmvc:3.2.6.RELEASE'
+    compile 'org.springframework:spring-jdbc:3.1.0.RELEASE'
+    compile 'org.springframework.security:spring-security-taglibs:3.1.3.RELEASE'
+    compile 'org.springframework.security:spring-security-config:3.1.3.RELEASE'
+    compile 'postgresql:postgresql:9.1-901.jdbc4'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
